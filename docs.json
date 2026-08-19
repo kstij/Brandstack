@@ -1,0 +1,16 @@
+"colors": {
+  "primary": "#D7FF3D",
+  "light": "#D7FF3D",
+  "dark": "#D7FF3D"
+},
+"background": { "dark": "#0D0D0D" },
+"navigation": {
+  "tabs": [
+    { "tab": "Welcome", "pages": ["index"] },
+    { "tab": "Documentation", "groups": [ ...your Fundamentals/Setup/Features groups... ] },
+    { "tab": "Integrations", "groups": [ ...your Integrations categories... ] },
+    { "tab": "Blog", "href": "https://yourdomain.com/blog" },
+    { "tab": "Changelog", "href": "https://yourdomain.com/changelog" },
+    { "tab": "Roadmap", "href": "https://yourdomain.com/roadmap" }
+  ]
+}
