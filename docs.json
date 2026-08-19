@@ -2,14 +2,15 @@
   "theme": "mint",
   "name": "Brandstack",
   "colors": {
-    "primary": "#D7FF3D",
-    "light": "#D7FF3D",
-    "dark": "#D7FF3D"
+    "primary": "#ec8b6d",
+    "light": "#ec8b6d",
+    "dark": "#ec8b6d"
   },
   "background": {
     "color": {
-      "dark": "#0D0D0D"
-    }
+      "dark": "#171717"
+    },
+    "decoration": "windows"
   },
   "logo": {
     "dark": "/logo/dark.svg",
@@ -118,20 +119,12 @@
       {
         "tab": "Blog",
         "href": "https://yourdomain.com/blog"
-      },
-      {
-        "tab": "Changelog",
-        "href": "https://yourdomain.com/changelog"
-      },
-      {
-        "tab": "Roadmap",
-        "href": "https://yourdomain.com/roadmap"
       }
     ]
   },
   "appearance": {
     "default": "dark",
-    "strict": true
+    "strict": false
   },
   "styling": {
     "eyebrows": "breadcrumbs"
