@@ -1,0 +1,64 @@
+---
+title: "Connect Instagram Insights to Brandstack for Social Performance Tracking"
+sidebarTitle: "Instagram"
+description: "Sync Instagram organic reach, impressions, engagement, follower growth, and top posts into Brandstack. Connect via Meta Business with instagram_basic and insights permissions."
+---
+
+Brandstack brings your Instagram organic performance data into unified marketing reports so you can measure social growth alongside paid ad results. This page explains what insights data is synced, how to connect a Business or Creator account, and how to resolve common setup problems.
+
+## What data syncs
+
+This integration syncs the following data from Instagram:
+
+- **Organic reach** - unique accounts that saw your posts and stories
+- **Impressions** - total views of posts, stories, and reels
+- **Engagement** - likes, comments, shares, saves, and story interactions
+- **Follower delta** - daily follower growth and net change
+- **Top-performing posts** - highest reach and engagement posts (requires a professional Business or Creator account)
+
+## Setup
+
+<Steps>
+  <Step title="Connect via Meta Business account">
+    In Brandstack, go to **Integrations** and select **Instagram**. Click **Connect** to authenticate through your Meta Business account.
+
+    <Note>
+      Your Instagram account must be a **Business** or **Creator** account. Personal accounts are not supported by the Instagram Graph API and cannot be synced.
+    </Note>
+  </Step>
+  <Step title="Verify account type">
+    Confirm that the Instagram account you want to sync is linked to your Meta Business account and is set to Business or Creator mode in Instagram settings.
+  </Step>
+  <Step title="Grant permissions">
+    During the OAuth flow, approve the following permissions:
+
+    - **instagram\_basic** - read basic profile and account information
+    - **insights** - access audience and content performance metrics
+  </Step>
+  <Step title="Configure backfill">
+    Set the backfill start date for historical data. Brandstack will pull available historical insights based on Instagram data retention limits.
+  </Step>
+  <Step title="Review and save">
+    Confirm the selected account and permissions, then click **Save**. Data syncing will begin shortly.
+
+    \[Screenshot: Instagram integration setup screen showing Meta Business account connection and permission approval steps\]
+  </Step>
+</Steps>
+
+## Troubleshooting
+
+<Accordion>
+  <Accordion title="Personal account not supported">
+    Instagram Insights data is only available through the Instagram Graph API, which requires a Business or Creator account. If your account is a personal account, switch to a professional account in Instagram settings, then reconnect the integration.
+  </Accordion>
+
+  <Accordion title="Missing insights">
+    If some metrics appear blank or incomplete, your account may have been switched to Business or Creator mode recently. Instagram generates insights data only after the account type is changed. Allow up to 48 hours after switching before reconnecting.
+  </Accordion>
+
+  <Accordion title="Token expiry">
+    Meta access tokens can expire after periods of inactivity. If your Instagram sync stops updating, go to **Integrations** in Brandstack, locate Instagram, and click **Reconnect** to refresh the token.
+  </Accordion>
+</Accordion>
+
+After setup, your Instagram data updates daily so your social performance metrics stay current in Brandstack.

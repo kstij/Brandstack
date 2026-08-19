@@ -1,0 +1,58 @@
+---
+title: "Connect Amazon Seller Central and Ads to Brandstack"
+sidebarTitle: "Amazon"
+description: "Integrate Amazon SP-API to sync Seller Central orders, settlements, returns, ads spend, and ASIN performance with an 18-month backfill."
+---
+
+Connect your Amazon seller account to Brandstack to consolidate Seller Central orders, settlement reports, returns, Amazon Ads spend, and ASIN-level performance data in one place. The integration uses the Amazon Selling Partner API (SP-API) OAuth flow, imports up to 18 months of historical data, and keeps your metrics current with automated syncs.
+
+## What data syncs
+
+Brandstack imports the following data from your Amazon account:
+
+- **Seller Central orders** — order details, status, timestamps, and fulfillment channel
+- **Settlement reports** — payout summaries, fees, and net amounts per settlement period
+- **Returns** — return requests, reasons, and refund status
+- **Amazon Ads spend** — campaign spend, impressions, clicks, and cost metrics
+- **ASIN-level performance** — sales velocity, inventory, and performance metrics by ASIN
+
+## Setup
+
+<Steps>
+  <Step title="Open Integrations">
+    In your Brandstack workspace, go to **Integrations** in the left sidebar, then click **Add Source**.
+  </Step>
+  <Step title="Select Amazon">
+    Choose **Amazon** from the list of e-commerce integrations.
+
+    \[Screenshot: Amazon connect screen\]
+  </Step>
+  <Step title="Start the SP-API OAuth flow">
+    Click **Connect with Amazon** to open the Amazon SP-API authorization page. Sign in with your seller account credentials when prompted.
+  </Step>
+  <Step title="Select marketplace(s)">
+    Choose the Amazon marketplaces you want to connect, such as Amazon.com, Amazon.co.uk, or Amazon.in. You can select multiple marketplaces if you sell across regions.
+  </Step>
+  <Step title="Grant read access">
+    Review the data access request and approve the permissions to allow Brandstack to read orders, settlements, returns, and advertising data.
+  </Step>
+  <Step title="Wait for the historical backfill">
+    Brandstack begins importing up to **18 months** of historical data. Completion time depends on order volume and marketplace count; most accounts finish within a few hours.
+  </Step>
+</Steps>
+
+After the backfill completes, your Amazon data is available in Brandstack reports and dashboards. Ongoing data syncs keep everything up to date automatically.
+
+## Troubleshooting
+
+<Accordion title="Expired refresh token">
+  If your Amazon connection stops syncing and shows an auth error, the SP-API refresh token may have expired. Go to **Integrations \> Amazon \> Reconnect** to restart the OAuth flow and generate a fresh token.
+</Accordion>
+
+<Accordion title="Missing settlements">
+  Settlement reports are generated periodically by Amazon, not in real time. If recent settlements are missing, check that the settlement report date range has passed and that your selected marketplace supports settlement reporting. Reconnecting the integration can also trigger a re-fetch.
+</Accordion>
+
+<Accordion title="Marketplace not showing">
+  If a marketplace you sell in does not appear during setup, verify that your Amazon seller account is registered and active in that region. Brandstack lists only marketplaces tied to the seller account you authorized.
+</Accordion>

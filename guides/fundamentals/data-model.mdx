@@ -1,0 +1,71 @@
+---
+title: "What Data Brandstack Syncs and How Often"
+description: "See exactly which data Brandstack pulls from Shopify, ad platforms, marketplaces, and logistics tools and how often it stays fresh for your reports."
+sidebarTitle: "Data Model"
+---
+
+Brandstack connects to your sales, marketing, and logistics tools, then pulls the key records you need to calculate profit and performance. This page shows what comes from each source and how fresh the data stays.
+
+<CardGroup cols={2}>
+  <Card title="Shopify" icon="shopify">
+    - Orders and order lines
+    - Customers and customer history
+    - Refunds and returns
+    - Products and SKUs
+    - Collections and inventory levels
+  </Card>
+
+  <Card title="Meta Ads" icon="meta">
+    - Campaigns and ad sets
+    - Daily spend
+    - Impressions and reach
+    - Conversions (platform reported)
+    - Ad creative names and IDs
+  </Card>
+
+  <Card title="Google Ads" icon="google">
+    - Campaigns and ad groups
+    - Daily spend
+    - Impressions and clicks
+    - Conversions (platform reported)
+    - Keyword and audience data
+  </Card>
+
+  <Card title="Google Analytics 4" icon="chart-bar">
+    - Sessions and users
+    - Traffic channels and sources
+    - Landing pages and events
+    - Ecommerce purchase events
+    - Geographic and device data
+  </Card>
+
+  <Card title="Amazon, Flipkart, Myntra" icon="shopping-bag">
+    - Orders and order lines
+    - Payouts and remittances
+    - Returns and replacements
+    - Product listings and fees
+    - Settlement reports
+  </Card>
+
+  <Card title="Logistics Partners" icon="truck">
+    - Shipments and tracking status
+    - Delivered and returned orders
+    - RTO (Return to Origin) events
+    - Delivery pin codes and zones
+    - Courier charges and COD remittance
+  </Card>
+</CardGroup>
+
+## Sync frequency
+
+Brandstack refreshes most data in near real time. Here is what that means in practice:
+
+- **Shopify orders and refunds**: typically within a few minutes of the event
+- **Ad spend and impressions**: updated at least hourly, sometimes faster
+- **Marketplace orders and payouts**: pulled daily or as soon as the marketplace report is available
+- **GA4 sessions**: updated daily for the previous day
+- **Logistics tracking**: updated as carriers push new events, usually every few hours
+
+<Note>
+  The first time you connect a source, Brandstack may take up to 24 hours to fully backfill your historical data. After that, new data flows in automatically.
+</Note>

@@ -1,0 +1,56 @@
+---
+title: "Connect Shopify to Brandstack for Orders and Products"
+sidebarTitle: "Shopify"
+description: "Link your Shopify store to sync orders, customers, products, refunds, and discounts. Set up via OAuth in minutes and backfill a year of data."
+---
+
+Connect your Shopify store to Brandstack to automatically import orders, line items, customers, products, refunds, and discounts into your workspace. Once connected, Brandstack keeps your e-commerce data up to date with regular syncs and provides an initial backfill so you can start analyzing historical performance right away.
+
+## What data syncs
+
+Brandstack imports the following data from your Shopify store:
+
+- **Orders** — order details, status, timestamps, and fulfillment information
+- **Line items** — individual products within each order, quantities, and prices
+- **Customers** — customer profiles, contact information, and order history
+- **Products** — product catalog, variants, SKUs, and inventory levels
+- **Refunds** — refund transactions linked to original orders
+- **Discounts** — discount codes, automatic discounts, and applied savings
+
+## Setup
+
+<Steps>
+  <Step title="Open Integrations">
+    In your Brandstack workspace, go to **Integrations** in the left sidebar, then click **Add Source**.
+  </Step>
+  <Step title="Select Shopify">
+    Choose **Shopify** from the list of e-commerce integrations.
+
+    \[Screenshot: Shopify connect screen\]
+  </Step>
+  <Step title="Enter your store subdomain">
+    Type your Shopify store subdomain (the part before `.myshopify.com`). For example, if your store URL is `your-store.myshopify.com`, enter `your-store`.
+  </Step>
+  <Step title="Authorize scopes">
+    Click **Connect** to open the Shopify OAuth flow. Review the requested permissions and click **Install app** to grant Brandstack read access to your store data.
+  </Step>
+  <Step title="Wait for the initial backfill">
+    Brandstack begins importing your historical data automatically. For a typical store with one year of history, the initial backfill usually completes within **15 to 30 minutes**.
+  </Step>
+</Steps>
+
+Once the backfill finishes, your Shopify data appears in the Brandstack dashboards and reports. New data syncs automatically going forward.
+
+## Troubleshooting
+
+<Accordion title="Store not found">
+  This error appears when the store subdomain is entered incorrectly. Double-check that you typed only the subdomain, not the full URL. For example, use `your-store` instead of `your-store.myshopify.com` or `https://your-store.myshopify.com`.
+</Accordion>
+
+<Accordion title="Backfill stuck">
+  If the backfill progress bar has not moved for over an hour, try disconnecting and reconnecting the integration from **Integrations \> Shopify \> Reconnect**. Large catalogs or high order volumes can extend the backfill time beyond the typical 15 to 30 minutes.
+</Accordion>
+
+<Accordion title="Missing orders">
+  Missing orders usually mean the custom app or OAuth scopes do not include read access to orders. Revisit the Shopify OAuth flow and confirm that the order reading permission is granted. If you use a private custom app, verify that its permissions cover orders, customers, and products.
+</Accordion>

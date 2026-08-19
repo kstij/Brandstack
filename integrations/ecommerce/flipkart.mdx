@@ -1,0 +1,58 @@
+---
+title: "Connect Flipkart Seller Hub to Brandstack for Orders"
+sidebarTitle: "Flipkart"
+description: "Sync Flipkart Seller Hub orders, cancellations, returns, payouts, and listing health into Brandstack using API credentials."
+---
+
+Connect your Flipkart Seller Hub account to Brandstack to track orders, cancellations, returns, payouts, and listing health in one unified view. You generate API credentials directly in Seller Hub, paste them into Brandstack, choose the SKUs you want to monitor, and the integration handles the rest, including a full historical backfill.
+
+## What data syncs
+
+Brandstack imports the following data from your Flipkart Seller Hub account:
+
+- **Orders** — order details, status, timestamps, and fulfillment information
+- **Cancellations** — canceled orders with reasons and timestamps
+- **Returns** — return requests, reasons, and refund status
+- **Payouts** — settlement amounts, deductions, and payout schedules
+- **Listings health** — listing status, violations, and visibility metrics
+
+## Setup
+
+<Steps>
+  <Step title="Open Integrations">
+    In your Brandstack workspace, go to **Integrations** in the left sidebar, then click **Add Source**.
+  </Step>
+  <Step title="Select Flipkart">
+    Choose **Flipkart** from the list of e-commerce integrations.
+
+    \[Screenshot: Flipkart connect screen\]
+  </Step>
+  <Step title="Generate API credentials in Seller Hub">
+    Log in to your Flipkart Seller Hub account. Navigate to the API or integration settings section and generate a new set of API credentials (typically an API key and secret). Copy both values.
+  </Step>
+  <Step title="Paste credentials into Brandstack">
+    Return to Brandstack and paste your Flipkart API key and secret into the corresponding fields. Click **Validate** to confirm the connection.
+  </Step>
+  <Step title="Choose SKUs to track">
+    Select the specific SKUs or product listings you want Brandstack to monitor, or choose **All SKUs** to track your entire catalog.
+  </Step>
+  <Step title="Run the backfill">
+    Brandstack begins importing historical data for your selected SKUs. The backfill duration depends on catalog size and order history.
+  </Step>
+</Steps>
+
+Once the backfill completes, your Flipkart data is ready for analysis in Brandstack. Ongoing syncs keep orders, returns, and payouts up to date.
+
+## Troubleshooting
+
+<Accordion title="Invalid credentials">
+  If validation fails, double-check that you copied the full API key and secret without extra spaces. Credentials may also expire if regenerated in Seller Hub, so create a fresh pair if the error persists.
+</Accordion>
+
+<Accordion title="Listings not appearing">
+  If some SKUs do not show up during SKU selection, confirm that those listings are active in Flipkart Seller Hub and assigned to the account whose credentials you provided. Inactive or delisted SKUs may be excluded.
+</Accordion>
+
+<Accordion title="Payout mismatch">
+  Small differences between Flipkart Seller Hub and Brandstack payout totals can occur due to timing. Flipkart finalizes settlements on a schedule, so wait for the settlement period to close before comparing. If the gap remains large, verify that all linked SKUs are included in the integration.
+</Accordion>

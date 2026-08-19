@@ -1,0 +1,65 @@
+---
+title: "Connect Google Ads to Brandstack for Cross-Channel Ad Reporting"
+sidebarTitle: "Google Ads"
+description: "Sync Google Ads campaigns, spend, impressions, clicks, and conversions into Brandstack. Connect via Google OAuth using a Manager Account or child account."
+---
+
+Brandstack brings your Google Ads data into a single view alongside other marketing channels. This page explains what campaign and keyword data is synced, how to authenticate and configure the connection, and how to fix common setup errors.
+
+## What data syncs
+
+This integration syncs the following data from Google Ads:
+
+- **Campaigns** - Search, Performance Max, Shopping, and YouTube campaigns with status and budget
+- **Spend** - cost metrics at campaign, ad group, and keyword level
+- **Impressions** - served impressions across all campaign types
+- **Clicks** - paid clicks and click-through metrics
+- **Conversions** - conversion actions and attributed conversion counts
+- **Keywords** - search terms and keyword performance for Search campaigns
+
+## Setup
+
+<Steps>
+  <Step title="Connect via Google OAuth">
+    In Brandstack, go to **Integrations** and select **Google Ads**. Click **Connect** to begin Google OAuth authentication.
+
+    <Note>
+      You must sign in with a Google account that has access to the Google Ads account or Manager Account (MCC) you want to sync.
+    </Note>
+  </Step>
+  <Step title="Choose account type">
+    Select whether you are connecting a **Manager Account (MCC)** or a **direct child account**. If using an MCC, Brandstack will list the child accounts available for syncing.
+  </Step>
+  <Step title="Provide customer ID">
+    Enter the **Customer ID** for the Google Ads account you want to connect. You can find this ID in the top-right corner of your Google Ads account screen.
+  </Step>
+  <Step title="Grant permissions">
+    During OAuth, approve access to your Google Ads data. Brandstack requests read-only access to campaign and reporting data.
+  </Step>
+  <Step title="Configure backfill">
+    Set how far back you want to backfill historical data. Brandstack will pull available historical performance data from the account start date.
+  </Step>
+  <Step title="Review and save">
+    Verify the account and permissions, then click **Save** to begin syncing.
+
+    \[Screenshot: Google Ads integration setup screen showing account type selection and customer ID field\]
+  </Step>
+</Steps>
+
+## Troubleshooting
+
+<Accordion>
+  <Accordion title="Customer ID access denied">
+    If you see an access denied error, confirm that your Google account has been added to the Google Ads account with Standard or Admin access. Read-only access will not allow Brandstack to pull data.
+  </Accordion>
+
+  <Accordion title="MCC vs direct account confusion">
+    If you connect an MCC but want a single child account, disconnect and reconnect using the child account's Customer ID directly. Alternatively, keep the MCC connection and select specific child accounts during setup.
+  </Accordion>
+
+  <Accordion title="Conversion mismatch with GA4">
+    Google Ads and GA4 attribute conversions differently. Brandstack reports the raw Google Ads conversion data. If your GA4 numbers differ, check that conversion actions, attribution models, and counting methods are aligned between the two platforms.
+  </Accordion>
+</Accordion>
+
+Once connected, Brandstack refreshes your Google Ads data daily.

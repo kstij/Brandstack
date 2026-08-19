@@ -1,0 +1,57 @@
+---
+title: "Connect Myntra PPMP to Brandstack for Style Performance"
+sidebarTitle: "Myntra"
+description: "Integrate Myntra PPMP to sync orders, commissions, returns, and style-level performance data into Brandstack via API credentials."
+---
+
+Connect your Myntra PPMP account to Brandstack to analyze orders, commissions, returns, and style-level performance metrics in one place. Because PPMP API access is managed by Myntra, you first request credentials from your category manager, then paste them into Brandstack, select your brand code, and run a backfill to populate your workspace.
+
+## What data syncs
+
+Brandstack imports the following data from your Myntra PPMP account:
+
+- **PPMP orders** — order details, status, timestamps, and fulfillment information
+- **Commissions** — commission deductions and net amounts per order
+- **Returns** — return requests, reasons, and refund status
+- **Style-level performance** — sales, inventory, and performance metrics by style ID
+
+## Setup
+
+<Steps>
+  <Step title="Open Integrations">
+    In your Brandstack workspace, go to **Integrations** in the left sidebar, then click **Add Source**.
+  </Step>
+  <Step title="Select Myntra">
+    Choose **Myntra** from the list of e-commerce integrations.
+
+    \[Screenshot: Myntra connect screen\]
+  </Step>
+  <Step title="Request PPMP API access">
+    Contact your Myntra category manager to request API credentials for the PPMP integration. Myntra will provide an API key and secret tied to your brand.
+  </Step>
+  <Step title="Paste credentials into Brandstack">
+    Once you receive your credentials, return to Brandstack and enter the API key and secret in the Myntra connection form. Click **Validate** to confirm access.
+  </Step>
+  <Step title="Select your brand code">
+    Choose the brand code associated with your Myntra account from the dropdown. If the code is not listed, verify that your credentials include access to that brand.
+  </Step>
+  <Step title="Run the backfill">
+    Brandstack starts importing your historical PPMP data. The backfill duration depends on your order history and style catalog size.
+  </Step>
+</Steps>
+
+After the backfill finishes, your Myntra data is available in Brandstack dashboards and reports. New data syncs automatically on an ongoing basis.
+
+## Troubleshooting
+
+<Accordion title="PPMP access pending">
+  If you do not yet have API credentials, the status in Brandstack shows as pending. Reach out to your Myntra category manager to request PPMP API access and credentials for your brand. There is no self-service option to generate these credentials.
+</Accordion>
+
+<Accordion title="Missing commissions">
+  If commission data appears incomplete, confirm that the commission report period has closed in Myntra. Commissions are often finalized after order delivery and return windows expire. Reconnecting the integration can also refresh the latest commission data.
+</Accordion>
+
+<Accordion title="Style ID mismatch">
+  If style-level metrics do not match what you see in Myntra, verify that the brand code selected in Brandstack matches the brand whose styles you are checking. Mismatched brand codes or outdated style IDs can cause discrepancies.
+</Accordion>

@@ -1,0 +1,62 @@
+---
+title: "Connect Google Analytics 4 to Brandstack for Web Analytics Reporting"
+sidebarTitle: "GA4"
+description: "Sync GA4 sessions, users, events, conversions, and ecommerce revenue into Brandstack. Connect via Google OAuth and select your GA4 property."
+---
+
+Brandstack pulls Google Analytics 4 web analytics into your marketing dashboards so you can compare site performance with ad spend and other channel data. This page covers what GA4 data is available, how to connect your property, and how to resolve common issues.
+
+## What data syncs
+
+This integration syncs the following data from Google Analytics 4:
+
+- **Sessions** - session counts, session duration, and engagement rate
+- **Users** - total users, new users, and returning users
+- **Channel groupings** - traffic grouped by default GA4 channel definitions
+- **Events** - custom and automatically collected event counts
+- **Conversions** - marked conversion events and counts
+- **Ecommerce revenue** - purchase revenue, transactions, and items sold (only if ecommerce tracking is configured in GA4)
+
+## Setup
+
+<Steps>
+  <Step title="Connect your Google account">
+    In Brandstack, go to **Integrations** and select **GA4**. Click **Connect** to begin Google OAuth authentication.
+
+    <Note>
+      Use a Google account that has at least Viewer access to the GA4 property you want to sync.
+    </Note>
+  </Step>
+  <Step title="Select GA4 property">
+    After authentication, you will see a list of GA4 properties accessible to your account. Select the property you want to connect to Brandstack.
+  </Step>
+  <Step title="Grant Analytics read scope">
+    During OAuth, approve the request for Google Analytics read access. Brandstack needs this scope to pull your property's reporting data.
+  </Step>
+  <Step title="Configure backfill">
+    Choose how far back to backfill historical data. Brandstack will pull available data from GA4 based on your retention settings.
+  </Step>
+  <Step title="Review and save">
+    Confirm the selected property and permissions, then click **Save**. Syncing will begin within a few minutes.
+
+    \[Screenshot: GA4 integration setup screen showing property selection and backfill date picker\]
+  </Step>
+</Steps>
+
+## Troubleshooting
+
+<Accordion>
+  <Accordion title="Property not visible">
+    If a GA4 property does not appear in the list, verify that your Google account has been granted access to the property in GA4. You need at least Viewer permissions. Ask your GA4 property admin to add your email and then reconnect.
+  </Accordion>
+
+  <Accordion title="Missing revenue data">
+    If ecommerce revenue is missing from reports, check that ecommerce tracking is enabled and properly configured in GA4. Revenue will only sync if the `purchase` event is being sent to GA4 with valid `value` and `currency` parameters.
+  </Accordion>
+
+  <Accordion title="Channel grouping differences">
+    GA4's default channel groupings may differ from other platforms. If channel names look inconsistent, review GA4's channel definitions in your GA4 property settings. Brandstack reports channel data exactly as GA4 classifies it.
+  </Accordion>
+</Accordion>
+
+Your GA4 data refreshes daily after the initial sync, keeping your web analytics reports up to date.

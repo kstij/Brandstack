@@ -1,0 +1,70 @@
+---
+title: "Brandstack Courier Integrations for Shipment Tracking"
+description: "Connect Delhivery, Shiprocket, Blue Dart, and other couriers to Brandstack. Sync shipment status, delivery dates, RTO events, and weight and zone data in real time."
+sidebarTitle: "Couriers"
+---
+
+Brandstack lets you connect your shipping and logistics partners directly into the platform so you can track shipments, monitor returns, and reconcile costs without switching between courier portals. This page covers the couriers we support, the data that syncs, and how to connect your accounts.
+
+## Supported couriers
+
+Brandstack integrates with the following logistics providers:
+
+- Delhivery
+- Shiprocket
+- Blue Dart
+- Xpressbees
+- Ecom Express
+- DTDC
+
+## What data syncs
+
+When a courier is connected, Brandstack automatically pulls the following fields into your shipment records:
+
+- Shipment status (picked up, in transit, out for delivery, delivered)
+- Delivery date and time
+- RTO events (return to origin initiated and completed)
+- Weight and zone information
+- Courier cost (when exposed by the courier API)
+
+## Setup
+
+<Steps>
+  <Step title="Go to Integrations">
+    In Brandstack, navigate to **Integrations**, then click **Add Source** and select the **Logistics** category.
+  </Step>
+  <Step title="Pick your courier">
+    Choose the courier you want to connect from the list of supported providers.
+  </Step>
+  <Step title="Enter credentials or use Shiprocket">
+    Paste the courier's API credentials into the form. For supported providers, you can also connect through the Shiprocket aggregator instead.
+  </Step>
+  <Step title="Map courier accounts">
+    Map the connected courier accounts to the corresponding Brandstack locations or channels.
+  </Step>
+  <Step title="Initial backfill">
+    Brandstack will perform an initial backfill of recent shipments. Depending on volume, this may take a few minutes to complete.
+  </Step>
+</Steps>
+
+## Placeholder screenshot
+
+<Frame caption="The Add Source flow in Brandstack Integrations">
+  ![Brandstack logistics integration setup screen](/images/integrations/logistics-add-source.png)
+</Frame>
+
+Replace the image path above with your actual screenshot once available.
+
+## Troubleshooting
+
+<Accordion title="AWB not found">
+  The courier has not yet picked up the shipment, so the AWB data is not available in their system. Wait until the first scan event occurs, then recheck.
+</Accordion>
+
+<Accordion title="RTO not marked">
+  Some couriers delay RTO status updates in their API. If a return is in progress but RTO is not reflected in Brandstack, verify the courier portal and allow a few hours for the status to propagate.
+</Accordion>
+
+<Accordion title="Cost missing">
+  Not all couriers expose cost via API. If cost data is missing, upload your rate card in **Settings** so Brandstack can calculate and display estimated courier charges.
+</Accordion>

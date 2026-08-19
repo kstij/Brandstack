@@ -1,0 +1,41 @@
+---
+title: "Authenticate with Brandstack Using Bearer Tokens"
+sidebarTitle: "Authentication"
+description: "Brandstack uses Bearer token authentication. Pass your API key in the Authorization header on every request. Learn how to obtain, use, and rotate keys."
+---
+
+Brandstack authenticates every API request with a Bearer token. You pass your API key in the `Authorization` header, and the API rejects any request that is missing or carries an invalid token.
+
+## Get an API key
+
+1. Open your Brandstack dashboard.
+2. Go to **Settings \> Developer**.
+3. Click **Generate API Key**.
+4. Copy the key immediately. It is shown only once.
+
+## Use the token in requests
+
+Add the `Authorization: Bearer <token>` header to every request.
+
+```bash curl example
+curl -X GET https://api.brandstack.com/v1/orders \
+  -H "Authorization: Bearer sk_live_abc123xyz"
+```
+
+```python Python requests example
+import requests
+
+headers = {
+    "Authorization": "Bearer sk_live_abc123xyz"
+}
+response = requests.get("https://api.brandstack.com/v1/orders", headers=headers)
+print(response.json())
+```
+
+## Rotate your key
+
+If you need to rotate a key for security reasons, go back to **Settings \> Developer** and click **Rotate API Key**. The old key is revoked immediately, so update any integrations before you rotate.
+
+<Warning>
+  Treat your API keys like passwords. Do not commit them to source control, share them in public channels, or embed them in client-side code. We recommend storing keys in environment variables or a secrets manager.
+</Warning>

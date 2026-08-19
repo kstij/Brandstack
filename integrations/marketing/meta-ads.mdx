@@ -1,0 +1,67 @@
+---
+title: "Connect Meta Ads to Brandstack for Campaign Analytics and Reporting"
+sidebarTitle: "Meta Ads"
+description: "Sync your Meta Ads campaigns, spend, impressions, clicks, and purchase events into Brandstack. Connect via Meta Business OAuth with ads_read and read_insights permissions."
+---
+
+Brandstack pulls your Meta Ads data into unified marketing reports so you can analyze campaign performance alongside other channels. This page covers what data is synced, how to set up the connection, and how to resolve common issues.
+
+## What data syncs
+
+This integration syncs the following data from Meta Ads:
+
+- **Campaigns** - campaign names, statuses, budgets, and objectives
+- **Ad sets** - targeting, placement, schedule, and bid settings
+- **Ads** - individual ad creatives, names, and delivery status
+- **Spend** - daily and lifetime spend per campaign, ad set, and ad
+- **Impressions** - total and unique impressions
+- **Clicks** - link clicks and all click types
+- **Purchases / CAPI events** - conversion events including Conversions API events
+- **Creative previews** - thumbnail and preview URLs for ad creative
+
+## Setup
+
+<Steps>
+  <Step title="Connect via Meta Business OAuth">
+    In Brandstack, go to **Integrations** and choose **Meta Ads**. Click **Connect** to start the OAuth flow with your Meta Business account.
+
+    <Note>
+      You need admin or advertiser access to the Meta Business Manager account that owns the ad accounts you want to sync.
+    </Note>
+  </Step>
+  <Step title="Select ad accounts">
+    After authentication, you will see a list of ad accounts linked to your Business Manager. Select one or more accounts to sync into Brandstack.
+  </Step>
+  <Step title="Grant permissions">
+    When prompted by Meta, approve the following permissions:
+
+    - **ads\_read** - read ad account info, campaigns, and ads
+    - **read\_insights** - access performance metrics and insights data
+  </Step>
+  <Step title="Configure backfill">
+    Brandstack automatically backfills historical data. Meta allows backfill up to **37 months** from the current date. Set your backfill start date in the integration settings.
+  </Step>
+  <Step title="Review and save">
+    Review your selected accounts and permissions, then click **Save**. Data will begin syncing within a few minutes.
+
+    \[Screenshot: Meta Ads integration setup screen showing account selection and permission confirmation\]
+  </Step>
+</Steps>
+
+## Troubleshooting
+
+<Accordion>
+  <Accordion title="Token expired">
+    Meta access tokens expire after a period of inactivity. If your sync stops, go to **Integrations** in Brandstack, find Meta Ads, and click **Reconnect** to refresh your token through OAuth.
+  </Accordion>
+
+  <Accordion title="Ad account not visible">
+    If an ad account does not appear in the selection list, you likely need Business Manager admin access. Ask your Meta Business Manager admin to add you with the appropriate role, then reconnect the integration.
+  </Accordion>
+
+  <Accordion title="Attribution window mismatch">
+    Brandstack uses Meta's default attribution settings. If your internal reporting uses custom attribution windows, you may see small differences in conversion counts. Align your Brandstack report settings with your Meta Ads attribution preferences.
+  </Accordion>
+</Accordion>
+
+After setup, your Meta Ads data will refresh daily so your reports stay current.

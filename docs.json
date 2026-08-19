@@ -43,8 +43,7 @@
               "guides/fundamentals/data-model",
               "guides/fundamentals/metrics",
               "guides/fundamentals/dimensions",
-              "guides/fundamentals/attribution",
-              "guides/fundamentals/tracking"
+              "guides/fundamentals/attribution"
             ]
           },
           {
@@ -129,5 +128,17 @@
         "href": "https://yourdomain.com/roadmap"
       }
     ]
+  },
+  "appearance": {
+    "default": "dark",
+    "strict": true
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs"
+  },
+  "fonts": {
+    "heading": {
+      "family": "Poppins"
+    }
   }
 }
