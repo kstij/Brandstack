@@ -1,16 +1,133 @@
-"colors": {
-  "primary": "#D7FF3D",
-  "light": "#D7FF3D",
-  "dark": "#D7FF3D"
-},
-"background": { "dark": "#0D0D0D" },
-"navigation": {
-  "tabs": [
-    { "tab": "Welcome", "pages": ["index"] },
-    { "tab": "Documentation", "groups": [ ...your Fundamentals/Setup/Features groups... ] },
-    { "tab": "Integrations", "groups": [ ...your Integrations categories... ] },
-    { "tab": "Blog", "href": "https://yourdomain.com/blog" },
-    { "tab": "Changelog", "href": "https://yourdomain.com/changelog" },
-    { "tab": "Roadmap", "href": "https://yourdomain.com/roadmap" }
-  ]
+{
+  "theme": "mint",
+  "name": "Brandstack",
+  "colors": {
+    "primary": "#D7FF3D",
+    "light": "#D7FF3D",
+    "dark": "#D7FF3D"
+  },
+  "background": {
+    "color": {
+      "dark": "#0D0D0D"
+    }
+  },
+  "logo": {
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
+  },
+  "navbar": {
+    "links": [
+      { "label": "Support", "href": "https://yourdomain.com/support" }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Login",
+      "href": "https://app.brandstack.com/login"
+    }
+  },
+  "search": {
+    "prompt": "Search..."
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Welcome",
+        "pages": ["index"]
+      },
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Fundamentals",
+            "pages": [
+              "guides/fundamentals/data-model",
+              "guides/fundamentals/metrics",
+              "guides/fundamentals/dimensions",
+              "guides/fundamentals/attribution",
+              "guides/fundamentals/tracking"
+            ]
+          },
+          {
+            "group": "Setup",
+            "pages": [
+              "guides/setup/invite",
+              "guides/setup/connect-platforms",
+              "guides/setup/go-live-paths"
+            ]
+          },
+          {
+            "group": "Features",
+            "pages": [
+              "guides/features/dashboard",
+              "guides/features/finance",
+              "guides/features/marketing",
+              "guides/features/marketplace-ops",
+              "guides/features/reports",
+              "guides/features/ai-assistant",
+              "guides/features/customers-reviews",
+              "guides/features/anomaly-alerts",
+              "guides/features/white-label",
+              "guides/features/custom-integrations"
+            ]
+          },
+          {
+            "group": "API Access",
+            "pages": [
+              "guides/api-access/overview",
+              "guides/api-access/authentication",
+              "guides/api-access/endpoints",
+              "guides/api-access/rate-limits"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Integrations",
+        "groups": [
+          {
+            "group": "Integrations",
+            "pages": ["integrations/overview"]
+          },
+          {
+            "group": "E-commerce",
+            "pages": [
+              "integrations/ecommerce/overview",
+              "integrations/ecommerce/shopify",
+              "integrations/ecommerce/amazon",
+              "integrations/ecommerce/flipkart",
+              "integrations/ecommerce/myntra"
+            ]
+          },
+          {
+            "group": "Marketing",
+            "pages": [
+              "integrations/marketing/overview",
+              "integrations/marketing/meta-ads",
+              "integrations/marketing/google-ads",
+              "integrations/marketing/ga4"
+            ]
+          },
+          {
+            "group": "Logistics",
+            "pages": [
+              "integrations/logistics/overview",
+              "integrations/logistics/couriers"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Blog",
+        "href": "https://yourdomain.com/blog"
+      },
+      {
+        "tab": "Changelog",
+        "href": "https://yourdomain.com/changelog"
+      },
+      {
+        "tab": "Roadmap",
+        "href": "https://yourdomain.com/roadmap"
+      }
+    ]
+  }
 }
