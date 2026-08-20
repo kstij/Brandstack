@@ -2,15 +2,15 @@
   "theme": "mint",
   "name": "Brandstack",
   "colors": {
-    "primary": "#0D0D0D",
-    "light": "#0D0D0D",
-    "dark": "#E5E5E5"
+    "primary": "#000000",
+    "light": "#ffffff",
+    "dark": "#A3A3A3"
   },
   "background": {
     "color": {
-      "dark": "#171717"
-    },
-    "decoration": "windows"
+      "dark": "#171717",
+      "light": "#ffffff"
+    }
   },
   "logo": {
     "dark": "/logo/dark.svg",
@@ -131,6 +131,9 @@
   },
   "fonts": {
     "heading": {
+      "family": "Poppins"
+    },
+    "body": {
       "family": "Poppins"
     }
   }
