@@ -67,15 +67,6 @@
               "guides/features/white-label",
               "guides/features/custom-integrations"
             ]
-          },
-          {
-            "group": "API Access",
-            "pages": [
-              "guides/api-access/overview",
-              "guides/api-access/authentication",
-              "guides/api-access/endpoints",
-              "guides/api-access/rate-limits"
-            ]
           }
         ]
       },
