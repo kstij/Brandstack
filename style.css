@@ -1,0 +1,23 @@
+/* Light mode: black button, white text */
+html:not(.dark) #navbar a[href*="app.brandstack.com/login"],
+html:not(.dark) #navbar-transition a[href*="app.brandstack.com/login"] {
+  background-color: #0D0D0D !important;
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) #navbar a[href*="app.brandstack.com/login"] *,
+html:not(.dark) #navbar-transition a[href*="app.brandstack.com/login"] * {
+  color: #FFFFFF !important;
+}
+
+/* Dark mode: white button, black text */
+html.dark #navbar a[href*="app.brandstack.com/login"],
+html.dark #navbar-transition a[href*="app.brandstack.com/login"] {
+  background-color: #FFFFFF !important;
+  color: #0D0D0D !important;
+}
+
+html.dark #navbar a[href*="app.brandstack.com/login"] *,
+html.dark #navbar-transition a[href*="app.brandstack.com/login"] * {
+  color: #0D0D0D !important;
+}
