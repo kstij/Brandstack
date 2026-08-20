@@ -10,11 +10,12 @@
     "color": {
       "dark": "#171717",
       "light": "#FAFAFA"
-    }
+    },
+    "decoration": "grid"
   },
   "logo": {
     "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "light": "/images/Brand_stack_Logo.webp"
   },
   "navbar": {
     "links": [],
@@ -125,7 +126,8 @@
     "strict": false
   },
   "styling": {
-    "eyebrows": "breadcrumbs"
+    "eyebrows": "breadcrumbs",
+    "codeblocks": "system"
   },
   "fonts": {
     "heading": {
@@ -134,5 +136,8 @@
     "body": {
       "family": "Poppins"
     }
+  },
+  "interaction": {
+    "drilldown": false
   }
 }
