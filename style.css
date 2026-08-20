@@ -7,6 +7,8 @@ html:not(.dark) #navbar-transition a[href*="app.brandstack.com/login"] > * {
   background: #0D0D0D !important;
   color: #FFFFFF !important;
   box-shadow: none !important;
+  border-radius: 9999px !important;
+
 }
 
 html:not(.dark) #navbar a[href*="app.brandstack.com/login"] *,
@@ -23,6 +25,7 @@ html.dark #navbar-transition a[href*="app.brandstack.com/login"] > * {
   background: #FFFFFF !important;
   color: #0D0D0D !important;
   box-shadow: none !important;
+  border-radius: 9999px !important;
 }
 
 html.dark #navbar a[href*="app.brandstack.com/login"] *,
