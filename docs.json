@@ -2,9 +2,9 @@
   "theme": "mint",
   "name": "Brandstack",
   "colors": {
-    "primary": "#ec8b6d",
-    "light": "#ec8b6d",
-    "dark": "#ec8b6d"
+    "primary": "#0D0D0D",
+    "light": "#FFFFFF",
+    "dark": "#FFFFFF"
   },
   "background": {
     "color": {
