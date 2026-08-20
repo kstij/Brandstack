@@ -3,8 +3,8 @@
   "name": "Brandstack",
   "colors": {
     "primary": "#3B82F6",
-    "light": "#60A5FA",
-    "dark": "#3B82F6"
+    "light": "#ffffff",
+    "dark": "#5d5d5d"
   },
   "background": {
     "color": {
@@ -17,12 +17,7 @@
     "light": "/logo/light.svg"
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "https://yourdomain.com/support"
-      }
-    ],
+    "links": [],
     "primary": {
       "type": "button",
       "label": "Login",
