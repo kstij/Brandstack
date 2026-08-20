@@ -18,13 +18,15 @@
   },
   "navbar": {
     "links": [
-      { "label": "Support", "href": "https://yourdomain.com/support" }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Login",
-      "href": "https://app.brandstack.com/login"
-    }
+      {
+        "label": "Support",
+        "href": "https://yourdomain.com/support"
+      },
+      {
+        "href": "https://app.brandstack.com/login",
+        "label": "Login"
+      }
+    ]
   },
   "search": {
     "prompt": "Search..."
