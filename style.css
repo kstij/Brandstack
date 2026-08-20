@@ -1,0 +1,12 @@
+/* Light mode: black Login button with white text */
+html:not(.dark) #navbar a[href*="login"],
+html:not(.dark) #navbar-transition a[href*="login"] {
+  background-color: #0D0D0D !important;
+  color: #FFFFFF !important;
+}
+
+/* Dark mode: keep the button color, force black text */
+html.dark #navbar a[href*="login"],
+html.dark #navbar-transition a[href*="login"] {
+  color: #0D0D0D !important;
+}
