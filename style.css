@@ -1,8 +1,12 @@
 /* Light mode: black button, white text */
 html:not(.dark) #navbar a[href*="app.brandstack.com/login"],
-html:not(.dark) #navbar-transition a[href*="app.brandstack.com/login"] {
+html:not(.dark) #navbar-transition a[href*="app.brandstack.com/login"],
+html:not(.dark) #navbar a[href*="app.brandstack.com/login"] > *,
+html:not(.dark) #navbar-transition a[href*="app.brandstack.com/login"] > * {
   background-color: #0D0D0D !important;
+  background: #0D0D0D !important;
   color: #FFFFFF !important;
+  box-shadow: none !important;
 }
 
 html:not(.dark) #navbar a[href*="app.brandstack.com/login"] *,
@@ -12,9 +16,13 @@ html:not(.dark) #navbar-transition a[href*="app.brandstack.com/login"] * {
 
 /* Dark mode: white button, black text */
 html.dark #navbar a[href*="app.brandstack.com/login"],
-html.dark #navbar-transition a[href*="app.brandstack.com/login"] {
+html.dark #navbar-transition a[href*="app.brandstack.com/login"],
+html.dark #navbar a[href*="app.brandstack.com/login"] > *,
+html.dark #navbar-transition a[href*="app.brandstack.com/login"] > * {
   background-color: #FFFFFF !important;
+  background: #FFFFFF !important;
   color: #0D0D0D !important;
+  box-shadow: none !important;
 }
 
 html.dark #navbar a[href*="app.brandstack.com/login"] *,
