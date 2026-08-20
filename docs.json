@@ -21,12 +21,13 @@
       {
         "label": "Support",
         "href": "https://yourdomain.com/support"
-      },
-      {
-        "href": "https://app.brandstack.com/login",
-        "label": "Login"
       }
-    ]
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Login",
+      "href": "https://app.brandstack.com/login"
+    }
   },
   "search": {
     "prompt": "Search..."
