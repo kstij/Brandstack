@@ -3,8 +3,8 @@
   "name": "Brandstack",
   "colors": {
     "primary": "#0D0D0D",
-    "light": "#FFFFFF",
-    "dark": "#FFFFFF"
+    "light": "#0D0D0D",
+    "dark": "#E5E5E5"
   },
   "background": {
     "color": {
